@@ -15,22 +15,39 @@ export const Certification = () => {
       data-aos-duration="2000"
     
     >
-      <h1 style={{ marginTop: "5%" }}>Certifications</h1>
-      <StyledProject className="text-center">
+            <style>{`
+
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap');
+
+.jacques-francois-shadow-regular {
+font-family: "Jacques Francois Shadow", serif;
+font-weight: 400;
+font-style: normal;
+}
+
+`}
+
+</style>
+<br/>
+<br/>
+<h1 className=" mt-4 jacques-francois-shadow-regular text-center">CERTIFICATES</h1>
+<br/>
+<br/>
+      <StyledProject  data-aos="fade-down" data-aos-duration="2000" className="m-4 text-center">
         <img
           src={require("./Images/wdt.jpg")}
           class="img-fluid border border-secondary"
           alt="..."
         ></img>
       </StyledProject>
-      <StyledProject className="text-center">
+      <StyledProject data-aos="fade-right" data-aos-duration="2000" className="m-4 text-center">
         <img
           src={require("./Images/techaintern.jpg")}
           class="img-fluid border border-secondary"
           alt="..."
         ></img>
       </StyledProject>
-      <StyledProject className="text-center">
+      <StyledProject data-aos="fade-up" data-aos-duration="2000" className="m-4 text-center">
         <img
           src={require("./Images/android.jpg")}
           class="img-fluid border border-black"
@@ -38,7 +55,7 @@ export const Certification = () => {
         ></img>
       </StyledProject>
 
-      <StyledProject className="text-center">
+      <StyledProject data-aos="fade-right" data-aos-duration="2000" className="m-4 text-center">
         <img
           src={require("./Images/java.jpg")}
           class="img-fluid border border-black"
@@ -46,7 +63,7 @@ export const Certification = () => {
         ></img>
       </StyledProject>
 
-      <StyledProject className="text-center">
+      <StyledProject data-aos="fade-left" data-aos-duration="2000" className="text-center m-4">
         <img
           src={require("./Images/sql.jpg")}
           class="img-fluid border border-black"
@@ -63,6 +80,7 @@ const StyledProject = styled.div`
   &:hover {
     cursor: pointer;
     background-color: #f0f0f0;
+   
   }
-  margin: 50px auto;
+  
 `;

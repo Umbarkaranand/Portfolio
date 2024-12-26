@@ -1,31 +1,25 @@
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Nvabar from "./Components/Nvabar";
-import About from "./Components/About";
+import './App.css';
+import { BrowserRouter as Router } from "react-router-dom";
+import Navbar from "./Components/Nvabar";
 import Skill from "./Components/Skill";
 import Project from "./Components/Project";
 import Contact from "./Components/Contact";
-import Home from "./Components/Home";
-import News from "./Components/News";
+import Front from "./Components/Front";
 import Certification from "./Components/Certification";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Nvabar />
-
-        <Routes>
-          <Route path="" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skill" element={<Skill />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/certification" element={<Certification />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+    <div className="App container-fluid" style={{ width:'100vw'}}>
+      <Navbar /> {/* Make sure the navbar is at the top */}
+      
+      <div className="check ms-4" > {/* Margin to avoid overlap */}
+        <section id="home"><Front /></section>
+        <section id="skills"><Skill /></section>
+        <section id="projects"><Project /></section>
+        <section id="certification"><Certification /></section>
+        <section id="contact"><Contact /></section>
       </div>
-    </Router>
+    </div>
   );
 }
 

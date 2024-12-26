@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Fira+Sans:wght@500&family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&display=swap');
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-weight: 100;
+}
+
+.frontpage {
+  width: 100%;
+  
+  margin-top: 160px;
+}
+
+.name {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.webdeveloper {
+  font-family: 'Bungee Spice', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;           /* Prevent text overflow */
+  border-right: 3px solid black;  /* Simulate the cursor */
+  width: 0;                   /* Hide the text initially */
+ 
+}
+.testwebname{
+  font-family: 'Bungee Spice', sans-serif;
+}
+
+
+.typing-active {
+  animation: typing 3s steps(20, end) forwards, blinking 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinking {
+  50% { border-color: transparent; }
+}
+
+.socoicon {
+  width: 40px;
+  margin: 0 10px;
+  transition: width 0.3s ease;
+}
+
+.socoicon:hover {
+  width: 50px;
+}
+
+.image {
+  height: 300px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  border-radius: 50px;
+}
+

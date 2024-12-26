@@ -1,128 +1,122 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import EMS from "./Images/EMS.jpg";
-import SRM from "./Images/SRM.jpg";
-import WFA from "./Images/WFA.jpg";
+import React, { useEffect } from "react";
+import EMS from "./Images/EMS.mp4";
+import parking from "./Images/parking.png";
+import WFA from "./Images/WFA.mp4";
+import ML from "./Images/ML.gif";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { CDBCard, CDBCardBody, CDBBtn, CDBContainer, CDBView } from "cdbreact";
+import styled from "styled-components"; // Import styled-components
+
+const StyledImage = styled.img`
+  height: 230px; /* Default height */
+  
+  @media (max-width: 576px) {
+    height: 180px; /* Height for small screens */
+  }
+`;
 
 const Project = () => {
-  const [isContentVisible, setIsContentVisible] = useState(false);
-
-  const toggleContentVisibility = () => {
-    setIsContentVisible(!isContentVisible);
-  };
-
   useEffect(() => {
     AOS.init();
+    AOS.refresh();
   }, []);
 
   return (
-    <StyledProject
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    
-    >
-      <h1 className="text-center" style={{ marginTop: "5%" }}>Projects</h1>
+    <div data-aos="fade-up" data-aos-duration="1000">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap');
 
-      <div className="row m-3" onClick={toggleContentVisibility}>
-        <div className="col-4">
-          <img
-            src={EMS}
-            alt="Employee Management System"
-            className="img-fluid"
-          />
-        </div>
-        <div className="col-8">
-          <h4 className="m-2">Employee Management System</h4>
-          <h7 className="mt-2">
-            The Employee Management System Project is a
-          </h7>{" "}
-          {isContentVisible && (
-            <h7>
-              {" "}
-              comprehensive solution designed to enhance efficiency and security
-              in organizational workforce management. Developed primarily for
-              desktop use, this project leverages HTML, CSS, and Bootstrap for
-              the frontend, while utilizing MySQL database and PHP for backend
-              operations.
-              <p className="mt-2">
-                github link : <a href="">Click here.</a>
-              </p>
-            </h7>
-          )}
-        </div>
-      </div>
+        .jacques-francois-shadow-regular {
+          font-family: "Jacques Francois Shadow", serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+      `}</style>
+      <br />
+      <br />
+      <h1 className="mt-4 jacques-francois-shadow-regular text-center">PROJECTS</h1>
+      <br />
+      <br />
 
-      <div className="row m-3" onClick={toggleContentVisibility}>
-        <div className="col-4">
-          <img
-            src={SRM}
-            alt="Employee Management System"
-            className="img-fluid"
-          />
-        </div>
-        <div className="col-8">
-          <h4 className="m-2">Student Review System</h4>
-          <h7 className="mt-2">The Student Review System Project is </h7>{" "}
-          {isContentVisible && (
-            <h7>
-              a sophisticated platform designed to empower students by providing
-              them with a centralized space to submit insightful reviews and
-              feedback on various aspects of their educational journey,
-              including courses, instructors, and overall educational
-              experiences.
-              <p className="mt-2">
-                github link :{" "}
-                <a href="https://github.com/Umbarkaranand/PBL-/tree/f8900762be3eb3221f8b9cf15c567a57724e510d/PBL">
-                  Click here.
-                </a>{" "}
-              </p>
-            </h7>
-          )}
-        </div>
-      </div>
-
-      <div className="row m-3" onClick={toggleContentVisibility}>
-        <div className="col-4">
-          <img
-            src={WFA}
-            alt="Employee Management System"
-            className="img-fluid"
-          />
-        </div>
-        <div className="col-8">
-          <h4 className="m-2">Weather Forecast App</h4>
-          <h7 className="mt-2">The Weather Forecast Web Application </h7>{" "}
-          {isContentVisible && (
-            <h7>
-              {" "}
-              is a sophisticated web-based tool meticulously crafted to provide
-              users with real-time weather information based on the inputted
-              city names. Designed with a focus on user experience and data
-              accuracy, the application utilizes an API to fetch and display
-              weather conditions, including temperature and humidity, for the
-              specified locations.
-              <p className="mt-2">
-                github link :{" "}
-                <a href="https://github.com/Umbarkaranand/TAI-IP/tree/2aff94e702cb20afbc14547b13f64bc4bd4a314b/Whether%20App%20(Task%20No.%202)">
-                  Click here.
+      <CDBContainer>
+        <div className="row d-flex justify-content-center">
+          {/* First Card */}
+          <div data-aos="fade-right" data-aos-duration="2000" className="col-lg-4 col-md-6 mb-4">
+            <CDBCard className="text-center p-4" style={{ borderRadius: "50px", height: "500px" }}>
+              <CDBView className="img-fluid d-flex justify-content-center">
+                <video autoPlay loop muted src={EMS} className="img-fluid" style={{ height: "230px" }} />
+              </CDBView>
+              <CDBCardBody className="d-flex flex-column align-items-center">
+                <h5>Employee Management System</h5>
+                <p style={{ fontSize: '0.7rem' }}>
+                  The Employee Management System Project is a comprehensive solution designed to enhance efficiency and security in organizational workforce management. Developed primarily for desktop use, this project leverages HTML, CSS, and Bootstrap for the frontend.
+                </p>
+                <a href="#" style={{ textDecoration: "none" }}>
+                  <CDBBtn color="dark">GitHub</CDBBtn>
                 </a>
-              </p>
-            </h7>
-          )}
+              </CDBCardBody>
+            </CDBCard>
+          </div>
+
+          {/* Repeat the above block for other cards */}
+          <div className="col-lg-4 col-md-6 mb-4">
+            <CDBCard data-aos="fade-down" data-aos-duration="2000" className="text-center p-4" style={{ borderRadius: "50px", height: "500px" }}>
+              <CDBView className="img-fluid d-flex justify-content-center">
+                <StyledImage src={parking} alt="Student Review System" className="img-fluid" />
+              </CDBView>
+              <br />
+              <CDBCardBody className="d-flex flex-column align-items-center">
+                <h5>Smart Parking System</h5>
+                <p style={{ fontSize: '0.8rem' }}>
+                  Designed a user-friendly web application for real-time parking availability checks, eliminating the need for physical presence at parking facilities. Implemented robust administrative features for managing and updating parking slot statuses.
+                </p>
+                <a href="https://github.com/Umbarkaranand/Smart-Parking-System" style={{ textDecoration: "none" }}>
+                  <CDBBtn color="dark">GitHub</CDBBtn>
+                </a>
+              </CDBCardBody>
+            </CDBCard>
+          </div>
+
+          <div data-aos="fade-left" data-aos-duration="2000" className="col-lg-4 col-md-6 mb-4">
+            <CDBCard className="text-center p-4" style={{ borderRadius: "50px", height: "500px" }}>
+              <CDBView className="img-fluid d-flex justify-content-center">
+                <video autoPlay loop muted src={WFA} className="img-fluid" style={{ height: "230px" }} />
+              </CDBView>
+              <br />
+              <CDBCardBody className="d-flex flex-column align-items-center">
+                <h5>Weather Forecast App</h5>
+                <p style={{ fontSize: '1rem' }}>
+                  A sophisticated web-based tool crafted to provide users with real-time weather information based on the inputted city names.
+                </p>
+                <a href="https://github.com/Umbarkaranand/TAI-IP/tree/main/Whether%20App%20(Task%20No.%202)" style={{ textDecoration: "none" }}>
+                  <CDBBtn color="dark">GitHub</CDBBtn>
+                </a>
+              </CDBCardBody>
+            </CDBCard>
+          </div>
+
+          <div data-aos="fade-left" data-aos-duration="2000" className="col-lg-4 col-md-6 mb-4 align-items-center">
+            <CDBCard className="text-center p-4" style={{ borderRadius: "50px", height: "500px" }}>
+              <CDBView className="img-fluid d-flex justify-content-center">
+                <StyledImage src={ML} alt="Machine Learning" className="img-fluid" />
+              </CDBView>
+              <br />
+              <CDBCardBody className="d-flex flex-column align-items-center">
+                <h5>Sentiments Analysis</h5>
+                <p style={{ fontSize: '0.8rem' }}>
+                  Trained and evaluated Machine Learning with the Maximum Entropy classifier. Enhanced skills in natural language processing, machine learning, and data analysis, with applications in social media monitoring and customer feedback analysis.
+                </p>
+                <a href="https://github.com/Umbarkaranand/Sentiment-Analysis" style={{ textDecoration: "none" }}>
+                  <CDBBtn color="dark">GitHub</CDBBtn>
+                </a>
+              </CDBCardBody>
+            </CDBCard>
+          </div>
         </div>
-      </div>
-    </StyledProject>
+      </CDBContainer>
+    </div>
   );
 };
-
-const StyledProject = styled.div`
-  .row:hover {
-    cursor: pointer;
-    background-color: #f0f0f0; /* Change to your desired hover background color */
-  }
-  margin: 50px auto;
-`;
 
 export default Project;
