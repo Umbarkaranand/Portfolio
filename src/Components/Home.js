@@ -4,7 +4,7 @@ import Skill from "./Skill";
 import Project from "./Project";
 import Contact from "./Contact";
 import Front from "./Front";
-import Certification from "./Certification";
+import Certification from "./Certificates/Certification";
 
 import ExpandableComponent from "./ExpandableComponent";
 

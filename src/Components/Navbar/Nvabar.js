@@ -2,7 +2,7 @@ import React from 'react';
 import {
   CDBSidebar,
   CDBSidebarContent,
-  CDBSidebarFooter,
+  //CDBSidebarFooter,
   CDBSidebarHeader,
   CDBSidebarMenu,
   CDBSidebarMenuItem,

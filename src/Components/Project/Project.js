@@ -52,7 +52,7 @@ const Project = () => {
                 <p style={{ fontSize: '0.7rem' }}>
                   The Employee Management System Project is a comprehensive solution designed to enhance efficiency and security in organizational workforce management. Developed primarily for desktop use, this project leverages HTML, CSS, and Bootstrap for the frontend.
                 </p>
-                <a href="#" style={{ textDecoration: "none" }}>
+                <a href="https://github.com/Umbarkaranand" style={{ textDecoration: "none" }}>
                   <CDBBtn color="dark">GitHub</CDBBtn>
                 </a>
               </CDBCardBody>

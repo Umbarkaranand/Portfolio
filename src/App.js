@@ -1,11 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router } from "react-router-dom";
-import Navbar from "./Components/Nvabar";
-import Skill from "./Components/Skill";
-import Project from "./Components/Project";
-import Contact from "./Components/Contact";
-import Front from "./Components/Front";
-import Certification from "./Components/Certification";
+import Navbar from "./Components/Navbar/Nvabar";
+import Skill from "./Components/Skill/Skill";
+import Project from "./Components/Project/Project";
+import Contact from "./Components/Contact/Contact";
+import Front from "./Components/Front/Front";
+import Certification from "./Components/Certificates/Certification";
 
 function App() {
   return (
