@@ -22,10 +22,7 @@ const Navbar = () => {
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
             <Link to="home" smooth={true} duration={500}>
-              <CDBSidebarMenuItem icon="columns">Home</CDBSidebarMenuItem>
-            </Link>
-            <Link to="about" smooth={true} duration={500}>
-              <CDBSidebarMenuItem icon="info-circle">About</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon='columns'>Home</CDBSidebarMenuItem>
             </Link>
             <Link to="skills" smooth={true} duration={500}>
               <CDBSidebarMenuItem icon="user">Skills</CDBSidebarMenuItem>
@@ -33,11 +30,15 @@ const Navbar = () => {
             <Link to="projects" smooth={true} duration={500}>
               <CDBSidebarMenuItem icon="chart-line">Projects</CDBSidebarMenuItem>
             </Link>
+            <a href="https://gamingworldtictactoe.netlify.app/" target="_blank" rel="noopener noreferrer">
+  <CDBSidebarMenuItem icon="gamepad">Game</CDBSidebarMenuItem>
+</a>
+
             <Link to="certification" smooth={true} duration={500}>
               <CDBSidebarMenuItem icon="certificate">Certification</CDBSidebarMenuItem>
             </Link>
             <Link to="contact" smooth={true} duration={500}>
-              <CDBSidebarMenuItem icon="envelope">Contact</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon='envelope'> Contact</CDBSidebarMenuItem>
             </Link>
           </CDBSidebarMenu>
         </CDBSidebarContent>
