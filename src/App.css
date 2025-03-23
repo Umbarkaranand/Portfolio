@@ -1,0 +1,13 @@
+/* App.css */
+.Nvabar {
+  padding-bottom: 20px; /* Adjust as needed */
+}
+
+
+
+/* App.css or index.css */
+html, body {
+margin: 0;
+padding: 0;
+overflow-x: hidden; /* Prevents horizontal scrolling */
+}

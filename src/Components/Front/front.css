@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Fira+Sans:wght@500&family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&display=swap');
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-weight: 100;
+}
+
+.frontpage {
+  width: 100%;
+  margin-top: 160px;
+}
+
+.name {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+/* Typing Container */
+.typing-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+/* Ensure the text starts from 0 width */
+.webdeveloper {
+  font-family: 'Bungee Spice', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black; /* Cursor effect */
+  display: inline-block;
+  text-align: left;
+  width: 0; /* Start with hidden text */
+  max-width: 370px; /* Prevent growing beyond this */
+}
+
+
+/* Typing animation starts from 0 width */
+.typing-active {
+  animation: typing 3s steps(20, end) forwards, blinking 0.75s step-end infinite;
+}
+
+/* Hide text but keep space when inactive */
+.typing-inactive {
+  width: 0; /* Completely hide text */
+  visibility: hidden;
+  border-right: none;
+}
+
+/* Typing Effect Animation */
+@keyframes typing {
+  from { width: 0; }  /* Start from nothing */
+  to { width: 100%; } /* Expand to full text */
+}
+
+/* Cursor blinking effect */
+@keyframes blinking {
+  50% { border-color: transparent; }
+}
+
+
+
+/* Social Icons */
+.socoicon {
+  width: 40px;
+  margin: 0 10px;
+  transition: width 0.3s ease;
+}
+
+.socoicon:hover {
+  width: 60px;
+}
+
+/* Profile Image */
+.image {
+  height: 300px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  border-radius: 50px;
+}
